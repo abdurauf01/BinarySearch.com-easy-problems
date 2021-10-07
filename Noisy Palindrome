@@ -1,0 +1,16 @@
+class Solution {
+        public  boolean solve(String s) {
+            StringBuilder f = new StringBuilder();
+
+            for (int i = 0; i < s.length(); i++) {
+                if (s.charAt(i) <= 122 && s.charAt(i) >= 97 && !Character.isDigit(s.charAt(i))) {
+                    f.append(s.charAt(i));
+                }
+            }
+            StringBuilder b = new StringBuilder();
+            for (int i = f.length() -1 ; i>=0; i--) {
+               b.append(f.charAt(i));
+            }
+            return b.toString().equalsIgnoreCase(f.toString());
+        }
+    }
